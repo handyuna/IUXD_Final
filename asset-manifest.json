@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/handyuna/IUXD_Final.git/static/css/main.30e2643c.css",
-    "main.js": "/handyuna/IUXD_Final.git/static/js/main.6a4753c3.js",
-    "index.html": "/handyuna/IUXD_Final.git/index.html",
-    "main.30e2643c.css.map": "/handyuna/IUXD_Final.git/static/css/main.30e2643c.css.map",
-    "main.6a4753c3.js.map": "/handyuna/IUXD_Final.git/static/js/main.6a4753c3.js.map"
+    "main.css": "/handyuna/IUXD_Final/static/css/main.30e2643c.css",
+    "main.js": "/handyuna/IUXD_Final/static/js/main.6a4753c3.js",
+    "index.html": "/handyuna/IUXD_Final/index.html",
+    "main.30e2643c.css.map": "/handyuna/IUXD_Final/static/css/main.30e2643c.css.map",
+    "main.6a4753c3.js.map": "/handyuna/IUXD_Final/static/js/main.6a4753c3.js.map"
   },
   "entrypoints": [
     "static/css/main.30e2643c.css",
