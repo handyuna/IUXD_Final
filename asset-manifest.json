@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/handyuna/IUXD_Final/static/css/main.30e2643c.css",
-    "main.js": "/handyuna/IUXD_Final/static/js/main.53e557ee.js",
-    "index.html": "/handyuna/IUXD_Final/index.html",
-    "main.30e2643c.css.map": "/handyuna/IUXD_Final/static/css/main.30e2643c.css.map",
-    "main.53e557ee.js.map": "/handyuna/IUXD_Final/static/js/main.53e557ee.js.map"
+    "main.css": "/IUXD_Final/static/css/main.30e2643c.css",
+    "main.js": "/IUXD_Final/static/js/main.53e557ee.js",
+    "index.html": "/IUXD_Final/index.html",
+    "main.30e2643c.css.map": "/IUXD_Final/static/css/main.30e2643c.css.map",
+    "main.53e557ee.js.map": "/IUXD_Final/static/js/main.53e557ee.js.map"
   },
   "entrypoints": [
     "static/css/main.30e2643c.css",
