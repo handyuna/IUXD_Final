@@ -1,0 +1,322 @@
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 폰트 적용! 뒤의 폰트들은 프리텐다드를 불러오지 못했을 때의 대비책입니다 */
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* 메인 컨테이너 또는 body에 적용 */
+.main-scroll-container {
+  /* IE, Edge용 */
+  -ms-overflow-style: none;
+  /* Firefox용 */
+  scrollbar-width: none;
+}
+
+/* 웨일, 크롬, 사파리용 */
+.main-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* 특정 굵기를 강조하고 싶을 때 사용하세요 */
+h1, h2, .strong {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    letter-spacing: -0.02em; /* 프리텐다드는 자간을 살짝 줄이면 더 예쁩니다 */
+}
+
+/* 전역 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.main-scroll-container { width: 100%; }
+
+/* 섹션 기본 설정 */
+.full-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 배경색 테마 */
+.bg-white { background-color: #ffffff; color: #000; }
+.bg-black { background-color: #000000; color: #fff; }
+
+.black-text { color: #000; }
+
+/* 콘텐츠 레이아웃 */
+.scene-content {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.layout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.reverse-row { flex-direction: row-reverse; }
+
+.text-side { flex: 1; text-align: left; }
+.image-side img {
+  max-width: 700px;
+  margin-left: 0;
+}
+
+/* 버튼 스타일 */
+.next-btn, .learn-more {
+  margin-top: 30px;
+  padding: 12px 40px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* 검은 배경일 때 버튼 (흰색 배경) */
+.next-btn { background: #fff; color: #000; }
+
+/* 흰색 배경일 때 버튼 (검은색 배경) */
+.next-btn.dark { background: #000; color: #fff; }
+
+/* 테두리만 있는 버튼 */
+.next-btn.outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+/* 텍스트 강조 */
+.large-text { font-size: 1.7rem; margin-bottom: 10px; }
+.large-text.strong { font-weight: bold; }
+
+
+.black-text{
+  margin-bottom: 30px;
+}
+
+.white-text {
+  color: #fff;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.5); /* 검정색 40% 투명도 */
+  padding: 30px 40px;            /* 위아래 15px, 좌우 40px 여백 */
+  display: inline-block;         /* 텍스트 길이에 맞춰 배경 박스 형성 */
+  border-radius: 4px;            /* 아주 살짝 둥글게 (취향껏 조절) */
+  width: 100%;                   /* 화면 전체를 가로지르는 바 형태라면 사용 */
+  text-align: center;
+}
+
+/* --- [공용 스타일] 인터랙션 섹션 등 일반 섹션용 --- */
+.scene-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- [About 섹션 전용] 다른 섹션에 영향 없음 --- */
+.about-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 !important; /* 다른 섹션의 패딩 무시 */
+}
+
+.about-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.about-section .layout-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+.about-section .image-side {
+  flex: 0 0 40vw; /* 화면 너비 40% 고정 */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-section .image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center; /* 머리 부분(상단) 고정 */
+  
+  /* 왼쪽 벽 밀착 */
+  margin: 0;
+  display: block;
+}
+
+.about-section .text-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  width: 550px;
+  text-align: left;
+}
+
+.about-section .next-btn {
+  font-size: 1.1rem;
+
+  width: 120px;
+ }
+ 
+
+/* Type-Right 섹션(글자 좌, 사진 우) 내의 버튼 설정 */
+.type-right .text-side .next-btn {
+  /* 왼쪽 벽 밀착 해제 및 오른쪽 정렬 */
+  margin-top: 40px;
+  display: block;
+  
+  /* 핵심: 부모(text-side) 안에서 자기 자신을 오른쪽 끝으로 밀기 */
+  align-self: flex-end; 
+}
+
+
+/* 오직 'about-only-section' 안에 있는 버튼 컨테이너만 우하단으로 보냄 */
+.about-only-section .bottom-button-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  z-index: 10;
+}
+
+/* 만약 다른 섹션에서도 이 클래스를 쓴다면 영향이 없도록 보장함 */
+/* (예: .intro-section .bottom-button-container 등은 이 설정의 영향을 받지 않음) */
+
+/* 해당 섹션 전용 스타일 */
+.response-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 검정 반투명 레이어 (Overlay) */
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* [핵심] 마지막 숫자 0.6이 투명도입니다. (0~1 사이 조절) */
+  z-index: 1; /* 배경사진(0)보다 위, 콘텐츠(2)보다 아래 */
+}
+
+/* 콘텐츠 스타일 (기존 유지하되 글씨색 확인) */
+.scene-content {
+  text-align: center;
+  color: #ffffff; /* [중요] 어두운 배경이므로 글씨는 하얗게 */
+}
+
+.large-text {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.large-text.strong {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* 버튼 스타일 (이전 섹션에서 만든 white-style 사용 추천) */
+.next-btn.white-style {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 12px 40px;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background 0.3s;
+}
+
+.next-btn.white-style:hover {
+  background-color: #f0f0f0;
+}
+
+/* 섹션 전체 레이아웃 */
+.response-section.split-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* 기본 배경색 검정 */
+  overflow: hidden;
+}
+
+/* 왼쪽 이미지 영역 */
+.split-layout .image-side {
+  flex: 1.2; /* 이미지 영역을 약간 더 넓게 설정 (취향에 따라 조절) */
+  height: 100%;
+}
+
+.split-layout .split-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 영역을 꽉 채우도록 */
+}
+
+/* 오른쪽 텍스트 영역 */
+.split-layout .text-side {
+  flex: 1;
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: flex-start; /* 가로 왼쪽 정렬 (이미지 바로 옆) */
+  padding: 0 5%;
+  color: #fff;
+}
+
+.split-layout .text-content {
+  /* max-width: 500px; 텍스트 너비 제한 */
+  text-align: left; /* 왼쪽 정렬 */
+}
+
+.split-layout .large-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  word-break: keep-all; /* 한글 줄바꿈 예쁘게 */
+}
+
+.split-layout .large-text.strong {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/* 하얀 버튼 스타일 유지 및 간격 */
+.split-layout .next-btn.white-style {
+  margin-top: 2rem;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 45px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
